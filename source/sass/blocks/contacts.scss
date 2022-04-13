@@ -1,0 +1,27 @@
+.contacts {
+  background-color: #ffffff;
+}
+
+.contacts__address {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.contacts__invitation {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Oswald", sans-serif;
+  color: #000000;
+  font-size: 16px;
+  line-height: 1.2em;
+  text-transform: uppercase;
+}
+
+.contacts__information {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.4em;
+}

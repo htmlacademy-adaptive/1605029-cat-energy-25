@@ -1,0 +1,58 @@
+.about-product__wrapper {
+  box-sizing: border-box;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-product__list {
+  margin: 0;
+  margin-bottom: 49px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.about-product__item {
+  $icon-size: 60px;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: $icon-size;
+  margin-bottom: 20px;
+  padding-left: $icon-size + 20px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: $icon-size;
+    height: $icon-size;
+    content: "";
+    background-color: #68b738;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--useful::before {
+    background-image: url("../img/icons/useful.svg");
+    background-size: 30px 32px;
+  }
+
+  &--form::before {
+    background-image: url("../img/icons/form.svg");
+    background-size: 29px 31px;
+  }
+
+  &--dose::before {
+    background-image: url("../img/icons/dose.svg");
+    background-size: 25px 30px;
+  }
+
+  &--result::before {
+    background-image: url("../img/icons/result.svg");
+    background-size: 32px 33px;
+  }
+}
