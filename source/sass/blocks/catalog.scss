@@ -1,14 +1,164 @@
+.catalog__product-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 20px repeat(2, 1fr) 20px;
+  grid-template-rows: repeat(3, auto);
+  padding-top: 19px;
+  padding-bottom: 25px;
+}
+
+.catalog__image-link {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+
 .catalog__title-link {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
   color: #222222;
   text-decoration: none;
 }
 
+.catalog__button {
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+  margin-top: 13px;
+}
+
+.catalog__product-information {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.3em;
+  border-collapse: collapse;
+}
+
+.catalog__product-card::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  border-bottom: 1px solid #ebebeb;
+}
+
 .catalog__product-title {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 18px;
+}
+
+.catalog__product-title,
+.catalog__show-more-title {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 1.25em;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.catalog__product-information th {
+  padding: 0;
+  font-weight: 400;
+  text-align: left;
+}
+
+.catalog__product-information td {
+  padding: 0;
+  text-align: right;
+}
+
+.catalog__show-more-link {
+  position: relative;
+  display: block;
+  margin-top: 25px;
+  padding-top: 53px;
+  padding-bottom: 8px;
+  text-decoration: none;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    content: "";
+    background-image: url("../img/icons/plus.svg");
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+  }
+}
+
+.catalog__show-more-title {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #111111;
+  text-align: center;
+}
+
+.catalog__show-more-addition {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #444444;
+  font-size: 12px;
+  line-height: 1.3em;
+  text-align: center;
+}
+
+.catalog__title-secondary {
+  margin: 25px auto 36px auto;
+  padding: 0 20px;
+  font-size: 24px;
+  line-height: 1em;
+  font-family: "Oswald", sans-serif;
+  color: #000000;
+  font-weight: 400;
+
+}
+
+.catalog__gift-offer {
+  position: relative;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 186px 58px 43px 58px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #68b738;
+  background-image: url("../img/order-all.jpg");
+  background-size: 280px 289px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    background-color: rgba(104, 183, 56, 0.85);
+  }
+
+  &::after {
+    position: absolute;
+    top: 58px;
+    right: 0;
+    left: 0;
+    width: 78px;
+    height: 80px;
+    margin: 0 auto;
+    content: "";
+    background-image: url("../img/icons/gift.svg");
+    background-size: 78px 80px;
+    background-repeat: no-repeat;
+  }
+}
+
+.catalog__gift-text {
+  position: relative;
+  z-index: 1;
 }
