@@ -36,6 +36,15 @@
   &--addition {
     padding-bottom: 14px;
   }
+
+  @media (min-width: 768px) {
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+
+  @media (min-width: 1440px) {
+
+  }
 }
 
 .form__field-group {
