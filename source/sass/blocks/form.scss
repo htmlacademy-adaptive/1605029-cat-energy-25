@@ -60,6 +60,10 @@
 
 .form__legend {
   margin-bottom: 35px;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: #000000;
+  font-size: 24px;
+  line-height: 1.1;
 }
 
 .form__label {
@@ -72,7 +76,7 @@
 .form__number,
 .form__textarea {
   box-sizing: border-box;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   color: #444444;
   font-size: 16px;
   line-height: 1.1em;

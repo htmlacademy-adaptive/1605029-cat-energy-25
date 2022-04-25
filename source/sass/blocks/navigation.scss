@@ -1,27 +1,130 @@
 .navigation {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  min-height: 65px;
+  font-size: 20px;
+  line-height: 1;
   font-weight: 500;
+
+  @media (min-width: 768px) {
+    min-height: 78px;
+    font-size: 18px;
+    line-height: 1.3;
+    font-weight: 400;
+  }
+
+  @media (min-width: 1440px) {
+    min-height: 112px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
+
+.navigation__logo {
+  display: block;
+  width: 33px;
+  height: 37px;
+  margin-top: 10px;
+  background-image: url("../img/logos/logo-simple-picture.svg");
+  background-size: 33px 37px;
+  background-repeat: no-repeat;
+
+  @media (min-width: 768px) {
+    width: 174px;
+    height: 51px;
+    margin-top: 24px;
+    background-image: url("../img/logos/logo-full.svg");
+    background-size: 174px 51px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 202px;
+    height: 59px;
+    margin-top: 53px;
+    background-size: 202px 59px;
+  }
+}
+
+.navigation__logo-title {
+  display: block;
+  width: 101px;
+  height: 18px;
+  margin-top: 23px;
+  background-image: url("../img/logos/logo-simple-title.svg");
+  background-size: 101px 18px;
+  background-repeat: no-repeat;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.navigation__toggle {
+  width: 24px;
+  height: 16px;
+  margin-top: 24px;
+  margin-left: 5px;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 .navigation__list {
-  margin: 0;
-  padding: 0;
+  display: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
   list-style-type: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+    margin-top: 42px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-top: 69px;
+  }
 }
 
 .navigation__item {
-  border-top: 1px solid #e6e6e6;
+  @media (max-width: 767px) {
+    border-top: 1px solid #e6e6e6;
 
-  &:last-child {
-    border-bottom: 1px solid #e6e6e6;
+    &:last-child {
+      border-bottom: 1px solid #e6e6e6;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &:not(:last-child) {
+      margin-right: 34px;
+    }
   }
 }
 
 .navigation__link {
   display: block;
+  box-sizing: border-box;
   padding-top: 22px;
   padding-bottom: 24px;
   color: #000000;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    padding-top: 0;
+    padding-bottom: 12px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-bottom: 10px;
+
+    &--main {
+      color: #ffffff;
+    }
+  }
 }

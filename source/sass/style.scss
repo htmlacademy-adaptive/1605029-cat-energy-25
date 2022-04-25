@@ -1,10 +1,12 @@
-//@use "./blocks/mixins-and-variables.scss";
+@use "./blocks/mixins-and-variables.scss";
+@use "./blocks/fonts.scss";
+@use "./blocks/visually-hidden.scss";
 @use "./blocks/page.scss";
+@use "./blocks/base.scss";
+@use "./blocks/button.scss";
 @use "./blocks/main.scss";
 @use "./blocks/header.scss";
 @use "./blocks/navigation.scss";
-@use "./blocks/promo.scss";
-@use "./blocks/button.scss";
 @use "./blocks/program-kinds.scss";
 @use "./blocks/about-product.scss";
 @use "./blocks/use-case.scss";

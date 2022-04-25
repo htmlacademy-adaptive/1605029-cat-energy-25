@@ -1,33 +1,40 @@
 .catalog__product-card {
   position: relative;
   display: grid;
-  grid-template-columns: 20px repeat(2, 1fr) 20px;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "image title"
+    "image information"
+    "button button";
   padding-top: 19px;
   padding-bottom: 25px;
+
+  &--additional {
+    grid-template-areas:
+      "title title"
+      "information information"
+      "button button";
+  }
 }
 
 .catalog__image-link {
-  grid-column: 2 / 3;
-  grid-row: 1 / 3;
+  grid-area: image;
 }
 
 .catalog__title-link {
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
+  grid-area: title;
   color: #222222;
   text-decoration: none;
 }
 
 .catalog__button {
-  grid-column: 2 / 4;
-  grid-row: 3 / 4;
+  grid-area: button;
   margin-top: 13px;
 }
 
 .catalog__product-information {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
+  grid-area: information;
   width: 100%;
   font-size: 12px;
   line-height: 1.3em;
@@ -50,7 +57,7 @@
 
 .catalog__product-title,
 .catalog__show-more-title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.25em;
   font-weight: 400;
@@ -112,18 +119,19 @@
   padding: 0 20px;
   font-size: 24px;
   line-height: 1em;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   color: #000000;
   font-weight: 400;
-
 }
 
 .catalog__gift-offer {
   position: relative;
+  box-sizing: border-box;
+  width: 280px;
   margin-top: 35px;
   margin-bottom: 35px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 186px 58px 43px 58px;
   text-align: center;
   color: #ffffff;

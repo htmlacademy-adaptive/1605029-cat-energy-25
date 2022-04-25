@@ -1,7 +1,11 @@
+.main {
+  min-width: 320px;
+}
+
 .main__title {
   margin: 27px auto 37px auto;
   padding: 0 20px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   color: #000000;
   font-size: 36px;
   line-height: 1em;
@@ -12,20 +16,31 @@
   box-sizing: border-box;
   min-width: 320px;
   margin: 0 auto;
-  padding: 0 20px;
   margin-bottom: 40px;
-  font-family: "Oswald", sans-serif;
+  padding: 0 20px;
+  font-family: "Oswald", "Arial", sans-serif;
   color: #000000;
   font-size: 36px;
   line-height: 1.11em;
   font-weight: 400;
+
+  @media (min-width: 768px) {
+    margin-bottom: 32px;
+    padding: 0 30px;
+    font-size: 60px;
+    line-height: 1em;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 110px;
+  }
 }
 
 .main__text {
   margin: 0 auto;
   margin-bottom: 15px;
   padding: 0 20px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   color: #000000;
   text-transform: uppercase;
 }

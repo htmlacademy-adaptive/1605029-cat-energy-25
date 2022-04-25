@@ -1,12 +1,10 @@
 .button {
   display: block;
   box-sizing: border-box;
-  width: 100%;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  font-family: "Oswald", sans-serif;
-  font-size: 14px;
-  line-height: 1.29em;
+  padding: 12px 26px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
   color: #ffffff;
   text-align: center;
   text-decoration: none;
@@ -16,8 +14,6 @@
   cursor: pointer;
 
   &--secondary {
-    font-size: 16px;
-    line-height: 1.25em;
     color: #444444;
     background-color: #f2f2f2;
   }
