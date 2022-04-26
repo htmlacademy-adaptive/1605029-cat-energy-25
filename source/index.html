@@ -7,38 +7,36 @@
   </head>
   <body class="page__body">
     <!-- ------ Header ------  -->
-    <header class="header">
+    <header class="header header--main">
       <!-- ------ Навигация ------ -->
       <nav class="header__navigation navigation">
         <a class="navigation__logo">
-          <img src="img/logos/logo-simple-picture.svg" alt="Кэт энерджи." width="33" height="37">
+          <span class="visually-hidden">Кэт энерджи.</span>
         </a>
-        <a class="navigation__logo-title">
-          <img src="img/logos/logo-simple-title.svg" alt="">
-        </a>
+        <a class="navigation__logo-title"></a>
         <button class="navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
 
         <ul class="navigation__list">
           <li class="navigation__item navigation__item--current">
-            <a class="navigation__link">Главная</a>
+            <a class="navigation__link navigation__link--main">Главная</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="catalog.html">Каталог продукции</a>
+            <a class="navigation__link navigation__link--main" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="form.html">Подбор программы</a>
+            <a class="navigation__link navigation__link--main" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
 
       <!-- ------ Промо-блок ------ -->
-      <div class="header__promo promo">
-        <h1 class="promo__title">Функциональное<br>
+      <div class="header__promo">
+        <h1 class="header__promo-title">Функциональное<br>
           питание для котов</h1>
-        <p class="promo__tagline">Занялся собой? Займись котом!</p>
-        <a class="promo__link button" href="form.html">Подобрать программу</a>
+        <p class="header__promo-tagline">Занялся собой? Займись котом!</p>
+        <a class="header__promo-link button" href="form.html">Подобрать программу</a>
       </div>
     </header>
 
@@ -49,8 +47,8 @@
         <h2 class="visually-hidden">Выбор программы.</h2>
         <div class="program-kinds__wrapper">
           <ul class="program-kinds__list">
-            <li class="program-kinds__item">
-              <h3 class="program-kinds__title program-kinds__title--weight-loss">Похудение</h3>
+            <li class="program-kinds__item program-kinds__item--weight-loss">
+              <h3 class="program-kinds__title">Похудение</h3>
 
               <p class="program-kinds__description">
                 Ваш кот весит больше собаки и
@@ -62,8 +60,8 @@
               <a class="program-kinds__link" href="#">Каталог Slim</a>
             </li>
 
-            <li class="program-kinds__item">
-              <h3 class="program-kinds__title program-kinds__title--weight-gain">Набор массы</h3>
+            <li class="program-kinds__item program-kinds__item--weight-gain">
+              <h3 class="program-kinds__title">Набор массы</h3>
               <p class="program-kinds__description">
                 Заработать авторитет среди
                 дворовых котов и даже собак?
@@ -108,7 +106,7 @@
 
       <!-- ------ Блок: Живой пример ------ -->
       <section class="use-case">
-        <h2 class="main__title-secondary">Живой пример</h2>
+        <h2 class="use-case__title main__title-secondary">Живой пример</h2>
         <div class="use-case__wrapper">
           <p class="use-case__description">
             Борис сбросил 5 кг за 2 месяца, просто
@@ -118,12 +116,16 @@
             привычек и по-прежнему спит по 16 часов
             в день.
           </p>
-          <dl class="use-case__details">
-            <dt class="use-case__details-description">снижение веса</dt>
-            <dd class="use-case__details-number">5 кг</dd>
-            <dt class="use-case__details-description">затрачено времени</dt>
-            <dd class="use-case__details-number">60 дней</dd>
-          </dl>
+          <div class="use-case__details">
+            <dl class="use-case__details-list">
+              <dt class="use-case__details-description">снижение<br>веса</dt>
+              <dd class="use-case__details-number">5 кг</dd>
+            </dl>
+            <dl class="use-case__details-list">
+              <dt class="use-case__details-description">затрачено времени</dt>
+              <dd class="use-case__details-number">60 дней</dd>
+            </dl>
+          </div>
           <p class="use-case__total-cost">Затраты на питание: 15 000 руб.</p>
 
           <!-- Слайдер с результатами -->
@@ -151,13 +153,13 @@
         <h2 class="visually-hidden">Наш адрес.</h2>
         <div class="contacts__address contacts__address--main">
           <p class="contacts__invitation">
-            Приглашаем<br>
-            к сотрудничеству<br>
+            Приглашаем
+            к сотрудничеству
             дилеров!
           </p>
           <p class="contacts__information">
-            ул. Большая<br>
-            Конюшенная, д. 19/8<br>
+            ул. Большая
+            Конюшенная, д. 19/8
             Санкт-Петербург
           </p>
         </div>

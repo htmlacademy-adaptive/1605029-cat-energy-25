@@ -1,20 +1,62 @@
+$icon-size: 60px;
+
+.about-product {
+  padding-top: 10px;
+  padding-bottom: 49px;
+
+  @media (min-width: 768px) {
+    padding-top: 20px;
+    padding-bottom: 47px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: 1440px) {
+    padding-top: 36px;
+    padding-bottom: 205px;
+    border: none;
+  }
+}
+
 .about-product__wrapper {
   box-sizing: border-box;
   min-width: 320px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @media (min-width: 768px) {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-right: 110px;
+    padding-left: 110px;
+  }
 }
 
 .about-product__list {
-  margin: 0;
-  margin-bottom: 49px;
-  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
   list-style-type: none;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 37px 138px;
+    padding-right: 79px;
+  }
+
+  @media (min-width: 1440px) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 37px 94px;
+    padding-right: 0;
+  }
 }
 
 .about-product__item {
-  $icon-size: 60px;
-
   position: relative;
   display: flex;
   align-items: center;
@@ -54,5 +96,47 @@
   &--result::before {
     background-image: url("../img/icons/result.svg");
     background-size: 32px 33px;
+  }
+
+  @media (min-width: 768px) {
+    display: block;
+    margin-bottom: 0;
+    padding: 151px 0 57px 0;
+
+    &::before {
+      top: 40px;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      margin: 0;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      font-family: "Oswald", "Arial", sans-serif;
+      font-size: 280px;
+      line-height: 1em;
+      color: #f2f2f2;
+    }
+
+    &--useful::after {
+      right: 22px;
+      content: "1";
+    }
+
+    &--form::after {
+      content: "2";
+    }
+
+    &--dose::after {
+      content: "3";
+    }
+
+    &--result::after {
+      content: "4";
+    }
   }
 }
