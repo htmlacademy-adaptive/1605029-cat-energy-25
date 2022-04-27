@@ -1,12 +1,25 @@
+.form {
+  padding-top: 24px;
+  padding-bottom: 32px;
+
+  @media (min-width: 768px) {
+    padding-top: 34px;
+    padding-bottom: 72px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-bottom: 82px;
+  }
+}
+
 .form__fieldset {
   position: relative;
   margin: 0;
-  padding: 0 20px;
+  padding: 0;
   border: none;
 
   &--pet {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    margin-bottom: 24px;
   }
 
   &--target {
@@ -15,35 +28,78 @@
     padding-bottom: 19px;
   }
 
-  &--pet::after,
+  &--target::before,
   &--target::after {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    top: 0;
+    left: -20px;
+    right: -20px;
     content: "";
     border-bottom: 1px solid #d9d9d9;
   }
 
-  &--contacts {
-    padding-bottom: 23px;
+  &--target::after {
+    bottom: 0;
   }
 
+  &--contacts,
   &--comment {
-    padding-bottom: 22px;
+    margin-bottom: 23px;
   }
 
   &--addition {
-    padding-bottom: 14px;
+    margin-bottom: 34px;
   }
 
   @media (min-width: 768px) {
-    padding-right: 70px;
-    padding-left: 70px;
+    &--pet {
+      margin-bottom: 72px;
+    }
+
+    &--target {
+      margin-bottom: 75px;
+      padding: 25px 28px;
+      border: 1px solid #e7e7e7;
+    }
+
+    &--target::before,
+    &--target::after {
+      border-bottom: none;
+    }
+
+    &--contacts,
+    &--comment {
+      margin-bottom: 65px;
+    }
+
+    &--addition {
+      margin-bottom: 54px;
+    }
   }
 
   @media (min-width: 1440px) {
+    &--pet {
+      grid-area: pet;
+    }
 
+    &--target {
+      grid-area: target;
+    }
+
+    &--contacts {
+      grid-area: contacts;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 80px;
+    }
+
+    &--comment {
+      grid-area: comment;
+    }
+
+    &--addition {
+      grid-area: addition;
+    }
   }
 }
 
@@ -58,13 +114,36 @@
 }
 
 .form__list {
-  margin: 0;
-  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
   list-style-type: none;
 }
 
 .form__item:not(:last-child) {
   margin-bottom: 13px;
+}
+
+.form__fieldset--addition .form__list {
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 32px 123px;
+    justify-content: start;
+  }
+
+  @media (min-width: 1440px) {
+    display: grid;
+    grid-template-columns: repeat(4, 245px);
+    gap: 32px 80px;
+    justify-content: start;
+  }
+}
+
+.form__fieldset--addition .form__item {
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
 }
 
 .form__legend {
@@ -73,6 +152,18 @@
   color: #000000;
   font-size: 24px;
   line-height: 1.1;
+
+  @media (min-width: 768px) {
+    margin-bottom: 76px;
+    font-size: 36px;
+    line-height: 1;
+  }
+}
+
+.form__fieldset--addition .form__legend {
+  @media (min-width: 768px) {
+    margin-bottom: 57px;
+  }
 }
 
 .form__label {
@@ -90,6 +181,11 @@
   font-size: 16px;
   line-height: 1.1em;
   text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 1.5;
+  }
 }
 
 .form__text,
@@ -100,6 +196,7 @@
 }
 
 .form__number {
+  width: 140px;
   appearance: textfield;
 
   &::-webkit-outer-spin-button,
@@ -111,16 +208,51 @@
 
 .form__textarea {
   width: 100%;
+  min-width: 280px;
   height: 150px;
   padding: 9px 12px 9px 15px;
   border: 1px solid #e7e7e7;
+
+  @media (min-width: 768px) {
+    width: 100%;
+    min-width: 628px;
+    height: 174px;
+  }
 }
 
 .form__button {
-  padding: 0 20px;
+  width: 100%;
+  min-width: 280px;
+  margin-bottom: 21px;
+  padding: 13px 45px;
+
+  @media (min-width: 768px) {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 282px;
+    margin-right: 61px;
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+
+  @media (min-width: 1440px) {
+    grid-area: button;
+    width: 530px;
+    margin-right: 0;
+  }
 }
 
 .form__explanation {
+  margin-bottom: 0;
   color: #000000;
   text-align: center;
+
+  @media (min-width: 768px) {
+    display: inline-block;
+  }
+
+  @media (min-width: 1440px) {
+    grid-area: explanation;
+    text-align: left;
+  }
 }

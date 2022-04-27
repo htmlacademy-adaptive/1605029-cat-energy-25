@@ -1,0 +1,29 @@
+.program-selection {
+  padding: 27px 20px 0;
+
+  @media (min-width: 768px) {
+    padding: 65px 67px 0 70px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 1220px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 73px 110px 0;
+  }
+}
+
+.program-selection__form {
+  @media (min-width: 1440px) {
+    display: grid;
+    grid-template-columns: repeat(4, 245px);
+    grid-template-areas:
+      "pet pet target target"
+      "contacts contacts contacts contacts"
+      "comment comment comment comment"
+      "addition addition addition addition"
+      "button button explanation explanation";
+    column-gap: 80px;
+    justify-content: start;
+  }
+}
