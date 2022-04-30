@@ -74,10 +74,12 @@
 
 .navigation__list {
   display: none;
-  margin-top: 0;
+
+  @include list-reset;
+  /*margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
-  list-style-type: none;
+  list-style-type: none;*/
 
   @media (min-width: 768px) {
     display: flex;
