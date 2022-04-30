@@ -2,9 +2,8 @@ $mobile-width: 767px;
 $tablet-width: 768px;
 $desktop-width: 1440px;
 
-/*@mixin list-reset() {
+@mixin list-reset {
   margin: 0;
   padding: 0;
   list-style-type: 0;
-  color: deepskyblue;
-}*/
+}
