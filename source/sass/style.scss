@@ -1,8 +1,7 @@
-@use "./blocks/mixins-and-variables.scss";
-@use "./blocks/fonts.scss";
-@use "./blocks/visually-hidden.scss";
+@use "fonts.scss";
+@use "visually-hidden.scss";
+@use "base.scss";
 @use "./blocks/page.scss";
-@use "./blocks/base.scss";
 @use "./blocks/button.scss";
 @use "./blocks/main.scss";
 @use "./blocks/header.scss";
