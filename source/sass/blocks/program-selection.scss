@@ -1,11 +1,13 @@
+@use "../variables.scss";
+
 .program-selection {
   padding: 27px 20px 0;
 
-  @media (min-width: 768px) {
+  @media (min-width: variables.$tablet-width) {
     padding: 65px 67px 0 70px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: variables.$desktop-width) {
     width: 1220px;
     margin-right: auto;
     margin-left: auto;
@@ -14,7 +16,7 @@
 }
 
 .program-selection__form {
-  @media (min-width: 1440px) {
+  @media (min-width: variables.$desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 245px);
     grid-template-areas:

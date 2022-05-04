@@ -1,15 +1,17 @@
+@use "../variables.scss";
+
 .program-kinds__wrapper {
   box-sizing: border-box;
-  min-width: 320px;
+  min-width: variables.$mobile-width;
   margin-right: auto;
   margin-left: auto;
   padding: 20px 20px 10px;
 
-  @media (min-width: 768px) {
+  @media (min-width: variables.$tablet-width) {
     padding: 0 30px 25px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: variables.$desktop-width) {
     padding: 82px 110px 35px;
   }
 }
@@ -23,7 +25,7 @@
   padding-left: 0;
   list-style-type: none;
 
-  @media (min-width: 1440px) {
+  @media (min-width: variables.$desktop-width) {
     grid-template-columns: 1fr 1fr;
     grid-gap: 80px;
   }
@@ -40,7 +42,7 @@
   padding: 22px 20px 18px;
   background-color: #f2f2f2;
 
-  @media (min-width: 768px) {
+  @media (min-width: variables.$tablet-width) {
     grid-template-columns: 1fr 236px;
     grid-template-areas:
       "title icon"
@@ -49,7 +51,7 @@
     padding: 0 62px 0 52px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: variables.$desktop-width) {
     grid-template-columns: 116px 1fr;
     grid-template-areas:
       "icon title"
@@ -68,13 +70,13 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
-    @media (min-width: 768px) {
+    @media (min-width: variables.$tablet-width) {
       justify-self: end;
       width: 200px;
       height: 211px;
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: variables.$desktop-width) {
       justify-self: start;
       width: 100px;
       height: 106px;
@@ -93,13 +95,13 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
-    @media (min-width: 768px) {
+    @media (min-width: variables.$tablet-width) {
       left: 0;
       width: 268px;
       height: 200px;
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: variables.$desktop-width) {
       left: -19px;
       justify-self: start;
       width: 134px;
@@ -121,14 +123,14 @@
   font-weight: 400;
   text-transform: uppercase;
 
-  @media (min-width: 768px) {
+  @media (min-width: variables.$tablet-width) {
     margin-top: 77px;
     margin-left: 0;
     font-size: 36px;
     line-height: 1;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: variables.$desktop-width) {
     margin-top: 0;
     margin-left: 47px;
   }
@@ -142,7 +144,7 @@
   padding-bottom: 23px;
   border-bottom: 1px solid #d9d9d9;
 
-  @media (min-width: 768px) {
+  @media (min-width: variables.$tablet-width) {
     margin-bottom: 0;
     padding-top: 24px;
     padding-right: 18px;
@@ -150,7 +152,7 @@
     border: none;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: variables.$desktop-width) {
     padding-top: 39px;
     padding-right: 0;
     padding-bottom: 23px;
@@ -169,19 +171,6 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  @media (min-width: 768px) {
-    margin-bottom: 53px;
-    padding: 0;
-    padding-right: 57px;
-    font-size: 20px;
-    line-height: 1.5;
-  }
-
-  @media (min-width: 1440px) {
-    margin-bottom: 0;
-    padding-right: 60px;
-  }
-
   &::after {
     position: absolute;
     right: 0;
@@ -192,7 +181,29 @@
     height: 10px;
     content: "";
     background-image: url("../img/icons/arrow.svg");
-    background-size: 32px 10px;
+    background-size: 100%;
     background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover::after {
+    background-image: url("../img/icons/arrow-long.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 53px;
+    padding: 0;
+    padding-right: 57px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 0;
+    padding-right: 60px;
   }
 }
