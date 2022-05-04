@@ -13,8 +13,24 @@
   border: none;
   cursor: pointer;
 
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   &--secondary {
     color: #444444;
     background-color: #f2f2f2;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+    }
   }
 }

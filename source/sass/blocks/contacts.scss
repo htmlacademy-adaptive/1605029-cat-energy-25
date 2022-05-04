@@ -1,3 +1,5 @@
+@use "../variables.scss";
+
 .contacts {
   background-color: #ffffff;
 }
@@ -13,11 +15,11 @@
     background-color: #ffffff;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: variables.$tablet-width) {
     padding: 56px 70px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: variables.$desktop-width) {
     width: 565px;
     padding: 56px 80px;
     background-color: #ffffff;
@@ -34,13 +36,13 @@
   line-height: 1.25;
   text-transform: uppercase;
 
-  @media (min-width: 768px) {
+  @media (min-width: variables.$tablet-width) {
     width: 172px;
     font-size: 20px;
     line-height: 1.3;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: variables.$desktop-width) {
     width: 163px;
   }
 }
@@ -51,12 +53,22 @@
   margin-bottom: 0;
   line-height: 1.4;
 
-  @media (min-width: 768px) {
+  @media (min-width: variables.$tablet-width) {
     width: 160px;
     line-height: 1.25;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: variables.$desktop-width) {
     width: 155px;
+  }
+}
+
+.contacts__map {
+  width: 100%;
+  min-width: variables.$mobile-width;
+  height: 362px;
+
+  @media (min-width: variables.$tablet-width) {
+    height: 400px;
   }
 }

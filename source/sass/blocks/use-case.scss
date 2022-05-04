@@ -1,3 +1,5 @@
+@use "../variables.scss";
+
 .use-case {
   position: relative;
   padding-top: 25px;
@@ -6,7 +8,7 @@
 }
 
 .use-case__title {
-  @media (min-width: 1440px) {
+  @media (min-width: variables.$desktop-width) {
     position: absolute;
     top: -136px;
     left: 0;
@@ -16,11 +18,11 @@
 
 .use-case__wrapper {
   box-sizing: border-box;
-  min-width: 320px;
+  min-width: variables.$mobile-width;
   margin: 0 auto;
   padding: 0 20px;
 
-  @media (min-width: 768px) {
+  @media (min-width: variables.$tablet-width) {
     display: grid;
     grid-template-areas:
       "description description"
@@ -31,7 +33,7 @@
     padding-right: 30px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: variables.$desktop-width) {
     position: relative;
     display: block;
     padding-left: 110px;
@@ -43,12 +45,12 @@
   margin-top: 0;
   margin-bottom: 20px;
 
-  @media (min-width: 768px) {
+  @media (min-width: variables.$tablet-width) {
     grid-area: description;
     margin-bottom: 54px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: variables.$desktop-width) {
     margin-bottom: 69px;
   }
 }
@@ -60,7 +62,7 @@
   grid-gap: 32px;
   margin-bottom: 34.5px;
 
-  @media (min-width: 768px) {
+  @media (min-width: variables.$tablet-width) {
     grid-area: details-list;
     grid-template-columns: repeat(auto-fit, 162px);
     justify-content: start;
@@ -68,7 +70,7 @@
     margin-right: 80px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: variables.$desktop-width) {
     margin-right: 0;
     margin-bottom: 55px;
   }
@@ -174,7 +176,7 @@
   text-align: center;
   background-color: #eaeaea;
 
-  @media (min-width: 768px) {
+  @media (min-width: variables.$tablet-width) {
     font-size: 14px;
   }
 }
@@ -195,7 +197,7 @@
   text-transform: uppercase;
   background-color: #eaeaea;
 
-  @media (min-width: 768px) {
+  @media (min-width: variables.$tablet-width) {
     top: 15px;
     margin-bottom: 11px;
     font-size: 30px;
@@ -215,7 +217,7 @@
   line-height: 1.4;
   text-transform: uppercase;
 
-  @media (min-width: 768px) {
+  @media (min-width: variables.$tablet-width) {
     grid-area: total;
     margin-top: 0;
     margin-bottom: 0;
@@ -224,13 +226,13 @@
     text-align: right;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: variables.$desktop-width) {
     text-align: left;
   }
 }
 
 .use-case__slider-container {
-  @media (min-width: 1440px) {
+  @media (min-width: variables.$desktop-width) {
     position: absolute;
     top: -209px;
     right: 110px;
@@ -267,7 +269,7 @@
     margin-right: auto;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: variables.$tablet-width) {
     font-size: 20px;
     line-height: 1.5;
   }
