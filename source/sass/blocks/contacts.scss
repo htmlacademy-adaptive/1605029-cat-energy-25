@@ -1,6 +1,7 @@
 @use "../variables.scss";
 
 .contacts {
+  position: relative;
   background-color: #ffffff;
 }
 
@@ -8,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 26px 20px;
+  padding: 26px variables.$mobile-padding;
   background-color: #f2f2f2;
 
   &--main {
@@ -20,6 +21,11 @@
   }
 
   @media (min-width: variables.$desktop-width) {
+    position: absolute;
+    top: 95px;
+    left: calc((100vw - variables.$desktop-width) / 2 + variables.$desktop-padding);
+    z-index: 2;
+    box-sizing: border-box;
     width: 565px;
     padding: 56px 80px;
     background-color: #ffffff;
@@ -70,5 +76,19 @@
 
   @media (min-width: variables.$tablet-width) {
     height: 400px;
+
+    [class*="image"] {
+      top: -106px !important;
+      left: -56px !important;
+      width: 113px !important;
+      height: 106px !important;
+      background-image: url("../img/icons/map-pin-large.png") !important;
+      background-size: 100% !important;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    position: relative;
+    z-index: 1;
   }
 }

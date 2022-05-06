@@ -1,18 +1,24 @@
 @use "../variables.scss";
 
-.program-kinds__wrapper {
+.program-kinds {
   box-sizing: border-box;
   min-width: variables.$mobile-width;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 20px 20px 10px;
+  padding: 20px variables.$mobile-padding 10px;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 0 30px 25px;
+    padding: 0 variables.$tablet-padding 25px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 82px 110px 35px;
+    padding: 82px variables.$desktop-padding 35px;
+  }
+}
+
+.program-kinds__wrapper {
+  @media (min-width: variables.$desktop-width) {
+    width: calc(variables.$desktop-width - 2 * variables.$desktop-padding);
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
