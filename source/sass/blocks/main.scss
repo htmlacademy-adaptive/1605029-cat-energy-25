@@ -23,10 +23,9 @@
 
 .main__title-secondary {
   box-sizing: border-box;
-  min-width: variables.$mobile-width;
   margin: 0 auto;
   margin-bottom: 40px;
-  padding: 0 20px;
+  padding: 0;
   font-family: variables.$additional-font;
   color: #000000;
   font-size: 36px;
@@ -35,13 +34,12 @@
 
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 32px;
-    padding: 0 30px;
     font-size: 60px;
     line-height: 1;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 0 110px;
+    width: calc(variables.$desktop-width - 2 * variables.$desktop-padding);
   }
 }
 
