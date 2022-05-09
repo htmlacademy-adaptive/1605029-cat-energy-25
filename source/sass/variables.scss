@@ -7,5 +7,8 @@ $mobile-padding: 20px;
 $tablet-padding: 30px;
 $desktop-padding: 110px;
 
+/* Отступ от края экрана до центрального блока для десктопной версии */
+$indent-width: calc((100vw - $desktop-width) / 2 + $desktop-padding);
+
 $main-font: "Arial", sans-serif;
 $additional-font: "Oswald", "Arial", sans-serif;
