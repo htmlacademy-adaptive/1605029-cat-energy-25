@@ -74,6 +74,11 @@
   min-width: variables.$mobile-width;
   height: 362px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/icons/map-pin-small@2x.png") !important;
+    background-size: 100% !important;
+  }
+
   @media (min-width: variables.$tablet-width) {
     height: 400px;
 
@@ -84,6 +89,11 @@
       height: 106px !important;
       background-image: url("../img/icons/map-pin-large.png") !important;
       background-size: 100% !important;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/icons/map-pin-large@2x.png") !important;
+        background-size: 100% !important;
+      }
     }
   }
 

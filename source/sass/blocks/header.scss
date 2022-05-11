@@ -40,6 +40,13 @@
         url("../img/promo-cat-desktop.jpg");
       background-size: 720px 694px;
       background-repeat: no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image:
+          linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+          url("../img/promo-cat-desktop@2x.jpg");
+        background-size: 720px 694px;
+      }
     }
 
     &::after {
@@ -53,6 +60,11 @@
       background: url("../img/promo-food-desktop.png");
       background-size: 552px 499px;
       background-repeat: no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/promo-food-desktop@2x.png");
+        background-size: 552px 499px;
+      }
     }
   }
 }
@@ -103,6 +115,17 @@
         100% 302px;
       background-repeat: no-repeat;
       background-position: top center;
+
+      @media (min-resolution: 2dppx) {
+        background-image:
+          linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+          url("../img/promo-cat@2x.jpg"),
+          linear-gradient(to right, #504f55, #444348);
+        background-size:
+          100% 302px,
+          320px 302px,
+          100% 302px;
+      }
     }
 
     &::after {
@@ -117,6 +140,11 @@
       background: url("../img/promo-food.png");
       background-size: 280px 270px;
       background-repeat: no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/promo-food@2x.png");
+        background-size: 280px 270px;
+      }
     }
   }
 
@@ -126,6 +154,11 @@
     background-size: 709px 609px;
     background-repeat: no-repeat;
     background-position: bottom 0 right 30px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-food-tablet@2x.png");
+      background-size: 709px 609px;
+    }
   }
 
   @media (min-width: variables.$desktop-width) {
