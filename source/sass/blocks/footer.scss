@@ -73,15 +73,19 @@
   grid-gap: 24px;
 }
 
+.footer__social-logo {
+  fill: #666666;
+}
+
 .footer__social-link {
-  &:hover .footer__social-logo path {
+  &:hover .footer__social-logo {
     fill: #68b738;
   }
 
   &:active {
     opacity: 0.3;
 
-    .footer__social-logo path {
+    .footer__social-logo {
       fill: #68b738;
     }
   }
@@ -95,6 +99,10 @@
   }
 }
 
+.footer__copyright-logo {
+  fill: #666666;
+}
+
 .footer__copyright-link {
   display: flex;
   align-items: center;
@@ -103,14 +111,14 @@
   line-height: 1.15;
   text-decoration: none;
 
-  &:hover .footer__copyright-logo path {
+  &:hover .footer__copyright-logo {
     fill: #68b738;
   }
 
   &:active {
     opacity: 0.3;
 
-    &.footer__copyright-logo path {
+    .footer__copyright-logo {
       fill: #68b738;
     }
   }

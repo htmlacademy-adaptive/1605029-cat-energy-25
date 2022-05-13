@@ -229,10 +229,34 @@
   @media (min-width: variables.$desktop-width) {
     position: absolute;
     top: -209px;
-    right: variables.$desktop-padding;
+    right: 0;
     margin-top: 0;
     padding: 0;
     background-color: transparent;
+  }
+}
+
+.use-case__image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+
+  @media (min-width: variables.$tablet-width) {
+    position: absolute;
+    top: -170px;
+    right: 0;
+    left: 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    position: relative;
+    top: 0;
+  }
+}
+
+.use-case__image {
+  @media (min-width: variables.$tablet-width) {
+    width: 592px;
   }
 }
 
@@ -247,26 +271,13 @@
   width: 85px;
 }
 
-.use-case__image-container {
-  margin-bottom: 15px;
-
-  @media (min-width: variables.$tablet-width) {
-    position: absolute;
-    top: -170px;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-    position: relative;
-    top: 0;
-  }
-}
-
 .use-case__control-label {
   font-family: "Oswald", "Arial", sans-serif;
   color: #000000;
   font-size: 16px;
   line-height: 1.25;
   text-transform: uppercase;
+  border-bottom: 1px dotted #b8b8b8;
 
   &:first-child {
     margin-left: auto;
