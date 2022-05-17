@@ -5,10 +5,10 @@ $icon-size: 60px;
 .about-product {
   box-sizing: border-box;
   min-width: variables.$mobile-width;
-  padding: 10px variables.$mobile-padding 49px;
+  padding: 10px variables.$mobile-padding 29px;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 20px variables.$tablet-padding 47px;
+    padding: 20px variables.$tablet-padding 45px;
     border-bottom: 1px solid #e6e6e6;
   }
 
@@ -41,8 +41,8 @@ $icon-size: 60px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 37px 94px;
+    grid-template-columns: repeat(4, 248px);
+    grid-gap: 37px 77px;
     padding-right: 0;
   }
 }
@@ -95,7 +95,7 @@ $icon-size: 60px;
     padding: 151px 0 57px 0;
 
     &::before {
-      top: 40px;
+      top: 38px;
       left: 0;
       width: 80px;
       height: 80px;
@@ -105,7 +105,7 @@ $icon-size: 60px;
     &::after {
       counter-increment: section;
       position: absolute;
-      top: 0;
+      top: -1px;
       right: 0;
       z-index: -1;
       content: counters(section, ".");
@@ -115,21 +115,44 @@ $icon-size: 60px;
       color: #f2f2f2;
     }
 
-    /*&--useful::after {
-      right: 22px;
-      //content: "1";
-    }
-
-    &--form::after {
-      //content: "2";
+    &--useful::after {
+      right: 21px;
     }
 
     &--dose::after {
-      //content: "3";
+      right: -1px;
     }
 
     &--result::after {
-      //content: "4";
-    }*/
+      right: -4px;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &::before {
+      top: 40px;
+    }
+
+    &--useful::after {
+      right: 23px;
+    }
+
+    &--form::after {
+      right: 2px;
+    }
+
+    &--dose::after {
+      right: 1px;
+    }
+
+    &--result::after {
+      right: -1px;
+    }
+  }
+}
+
+@media (max-width: variables.$mobile-width-max) {
+  .about-product__item--result br {
+    display: none;
   }
 }
