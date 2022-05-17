@@ -149,7 +149,7 @@
   }
 
   @media (min-width: variables.$tablet-width) {
-    padding: 62px 30px 526px 117px;
+    padding: 52px 30px 526px 117px;
     background-image: url("../img/promo-food-tablet.png");
     background-size: 709px 609px;
     background-repeat: no-repeat;
@@ -162,7 +162,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 114px 720px 0 80px;
+    padding: 104px 720px 0 80px;
     background-image: none;
   }
 }
@@ -205,7 +205,8 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin-bottom: 52px;
+    margin-bottom: 51px;
+    margin-left: 0;
   }
 }
 
@@ -217,13 +218,21 @@
   @media (max-width: variables.$mobile-width-max) {
     grid-row: -1 / -2;
     grid-column: 2 / 3;
+    margin-top: 3px;
+    padding-top: 11px;
+    padding-bottom: 11px;
   }
 
   @media (min-width: variables.$tablet-width) {
     margin-left: 3px;
     padding-top: 14px;
+    padding-right: 30px;
     padding-bottom: 14px;
     font-size: 20px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-left: 0;
   }
 }
 

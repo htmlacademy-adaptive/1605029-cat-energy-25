@@ -17,7 +17,7 @@
   }
 
   @media (min-width: variables.$tablet-width) {
-    padding: 56px 70px;
+    padding: 56px 70px 61px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -44,6 +44,7 @@
 
   @media (min-width: variables.$tablet-width) {
     width: 172px;
+    margin-top: 4px;
     font-size: 20px;
     line-height: 1.3;
   }
@@ -61,11 +62,20 @@
 
   @media (min-width: variables.$tablet-width) {
     width: 160px;
+    text-align: right;
     line-height: 1.25;
   }
 
   @media (min-width: variables.$desktop-width) {
     width: 155px;
+    text-align: left;
+  }
+}
+
+.contacts__city {
+  @media (min-width: variables.$tablet-width) {
+    display: block;
+    margin-top: 20px;
   }
 }
 
