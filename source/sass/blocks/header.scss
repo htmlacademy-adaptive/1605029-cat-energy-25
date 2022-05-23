@@ -12,11 +12,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    width: 1220px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 110px;
-    padding-right: 110px;
+    min-width: variables.$desktop-width;
   }
 }
 
@@ -32,14 +28,16 @@
       top: 0;
       right: 0;
       z-index: 1;
-      width: 720px;
+      width: 50%;
       height: 694px;
       content: "";
+      background-color: #63a83a;
       background-image:
         linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
         url("../img/promo-cat-desktop.jpg");
       background-size: 720px 694px;
       background-repeat: no-repeat;
+      background-position: right;
 
       @media (min-resolution: 2dppx) {
         background-image:
@@ -52,7 +50,7 @@
     &::after {
       position: absolute;
       top: 141px;
-      right: 330px;
+      left: calc(50% - 162px);
       z-index: 2;
       width: 552px;
       height: 499px;
@@ -71,19 +69,20 @@
 
 .header__navigation {
   @media (max-width: variables.$mobile-width-max) {
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: variables.$mobile-padding;
+    padding-left: variables.$mobile-padding;
   }
 
   @media (min-width: variables.$tablet-width) {
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: variables.$tablet-padding;
+    padding-left: variables.$tablet-padding;
   }
 
   @media (min-width: variables.$desktop-width) {
     z-index: 2;
-    margin-right: 0;
-    margin-left: 0;
+    width: calc(variables.$desktop-width - 2 * variables.$desktop-padding);
+    margin-right: auto;
+    margin-left: auto;
     padding-right: 0;
     padding-left: 0;
   }
@@ -162,6 +161,10 @@
   }
 
   @media (min-width: variables.$desktop-width) {
+    box-sizing: border-box;
+    width: calc(variables.$desktop-width - 2 * variables.$desktop-padding);
+    margin-right: auto;
+    margin-left: auto;
     padding: 104px 720px 0 80px;
     background-image: none;
   }

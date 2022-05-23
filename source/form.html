@@ -49,11 +49,11 @@
           <fieldset class="form__fieldset form__fieldset--pet">
             <legend class="visually-hidden">Данные о питомце.</legend>
             <div class="form__field-group">
-              <label class="form__label" for="pet-name">Имя:*</label>
+              <label class="form__label form__label--name" for="pet-name">Имя:*</label>
               <input class="form__text" type="text" id="pet-name" name="pet-name" placeholder="Барсик" required>
             </div>
             <div class="form__field-group">
-              <label class="form__label" for="pet-weight">Вес (кг):*</label>
+              <label class="form__label form__label--weight" for="pet-weight">Вес (кг):*</label>
               <input class="form__number" type="number" id="pet-weight" name="pet-weight" placeholder="7" required>
             </div>
             <div class="form__field-group">
@@ -90,9 +90,10 @@
           </fieldset>
 
           <fieldset class="form__fieldset form__fieldset--contacts">
-            <legend class="form__legend">Контактные данные <br>(владельца кота)</legend>
+            <legend class="form__legend">Контактные данные&nbsp;
+              <br>(владельца кота)</legend>
             <div class="form__field-group">
-              <label class="form__label" for="email">E-mail:*</label>
+              <label class="form__label form__label--email" for="email">E-mail:*</label>
               <input class="form__text form__text--email" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
               <span>
                 <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -105,7 +106,7 @@
               </span>
             </div>
             <div class="form__field-group">
-              <label class="form__label" for="phone">Телефон:*</label>
+              <label class="form__label form__label--phone" for="phone">Телефон:*</label>
               <input class="form__text form__text--phone" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
               <span>
                 <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -177,13 +178,13 @@
         <div class="contacts__address">
           <p class="contacts__invitation">
             Приглашаем
-            к сотрудничеству
-            дилеров
+            к&nbsp;сотрудничеству
+            дилеров!
           </p>
           <p class="contacts__information">
             ул. Большая
             Конюшенная, д. 19/8
-            Санкт-Петербург
+            <span class="contacts__city">Санкт-Петербург</span>
           </p>
         </div>
         <!-- ------ Карта ------ -->
@@ -196,7 +197,7 @@
       <div class="footer__wrapper">
         <div class="footer__logo">
           <a class="footer__logo-link" href="index.html">
-            <img src="img/logos/logo-simple-title.svg" alt="Кэт энерджи.">
+            <img src="img/logos/logo-simple-title.svg" alt="Кэт энерджи." width="128" height="24">
           </a>
         </div>
         <!-- ------ Соцсети ------ -->

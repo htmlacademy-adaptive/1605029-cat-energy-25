@@ -44,13 +44,17 @@
 }
 
 .main__text {
+  box-sizing: border-box;
+  max-width: 250px;
   margin-top: 0;
   margin-bottom: 15px;
+  padding-right: 10px;
   font-family: variables.$additional-font;
   color: #000000;
   text-transform: uppercase;
 
   @media (min-width: variables.$tablet-width) {
+    max-width: 350px;
     margin-bottom: 32px;
     font-size: 20px;
     line-height: 1.5;
