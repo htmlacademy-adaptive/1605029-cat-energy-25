@@ -2,7 +2,7 @@
 @use "../mixins.scss";
 
 .form {
-  padding-top: 24px;
+  padding-top: 23px;
   padding-bottom: 32px;
 
   @media (min-width: variables.$tablet-width) {
@@ -22,12 +22,12 @@
   border: none;
 
   &--pet {
-    margin-bottom: 24px;
+    margin-bottom: 22px;
   }
 
   &--target {
     margin-bottom: 26px;
-    padding-top: 22px;
+    padding-top: 23px;
     padding-bottom: 19px;
   }
 
@@ -49,23 +49,26 @@
     bottom: 0;
   }
 
-  &--contacts,
   &--comment {
+    margin-bottom: 21px;
+  }
+
+  &--contacts {
     margin-bottom: 23px;
   }
 
   &--addition {
-    margin-bottom: 34px;
+    margin-bottom: 23px;
   }
 
   @media (min-width: variables.$tablet-width) {
     &--pet {
-      margin-bottom: 72px;
+      margin-bottom: 73px;
     }
 
     &--target {
       margin-bottom: 75px;
-      padding: 25px 28px;
+      padding: 25px 28px 23px;
       border: 1px solid #e7e7e7;
     }
 
@@ -74,23 +77,28 @@
       display: none;
     }
 
-    &--contacts,
+    &--contacts {
+      margin-bottom: 66px;
+    }
+
     &--comment {
-      margin-bottom: 65px;
+      margin-bottom: 61px;
     }
 
     &--addition {
-      margin-bottom: 54px;
+      margin-bottom: 56px;
     }
   }
 
   @media (min-width: variables.$desktop-width) {
     &--pet {
       grid-area: pet;
+      margin-bottom: 69px;
     }
 
     &--target {
       grid-area: target;
+      margin-bottom: 69px;
     }
 
     &--contacts {
@@ -98,14 +106,17 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 80px;
+      margin-bottom: 68px;
     }
 
     &--comment {
       grid-area: comment;
+      margin-bottom: 63px;
     }
 
     &--addition {
       grid-area: addition;
+      margin-bottom: 61px;
     }
   }
 }
@@ -117,7 +128,13 @@
   align-items: center;
 
   &:not(:last-child) {
-    margin-bottom: 13px;
+    margin-bottom: 14px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -142,7 +159,7 @@
   @media (min-width: variables.$tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    gap: 32px 123px;
+    gap: 32px 105px;
     justify-content: start;
   }
 
@@ -155,6 +172,8 @@
 }
 
 .form__fieldset--addition .form__item {
+  margin-bottom: 12px;
+
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 0;
   }
@@ -163,7 +182,8 @@
 .form__legend {
   position: relative;
   display: inline-block;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
+  margin-left: -2px;
   padding-right: 14px;
   font-family: "Oswald", "Arial", sans-serif;
   color: #000000;
@@ -220,16 +240,49 @@
 }
 
 .form__fieldset--addition .form__legend {
+  margin-bottom: 33px;
   padding-right: 23px;
 
   @media (min-width: variables.$tablet-width) {
-    margin-bottom: 57px;
+    margin-bottom: 55px;
     padding-right: 41px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 57px;
   }
 }
 
 .form__label {
-  margin-right: 13px;
+  margin-right: 16px;
+
+  &--name {
+    margin-right: 14px;
+  }
+
+  &--email {
+    margin-right: 11px;
+  }
+
+  &--phone {
+    margin-right: 10px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin-right: 19px;
+
+    &--name {
+      margin-right: 17px;
+    }
+
+    &--weight {
+      margin-right: 21px;
+    }
+
+    &--phone {
+      margin-right: 15px;
+    }
+  }
 }
 
 .form__label,
@@ -253,7 +306,7 @@
 .form__number {
   flex-grow: 1;
   width: 100px;
-  padding: 13px 16px 14px 16px;
+  padding: 10px 16px 10px;
   border: 1px solid #e7e7e7;
 }
 
@@ -268,9 +321,11 @@
 }
 
 .form__textarea {
+  box-sizing: border-box;
   width: 100%;
   min-width: 280px;
   height: 150px;
+  margin-top: 4px;
   padding: 9px 12px 9px 15px;
   border: 1px solid #e7e7e7;
 
@@ -278,6 +333,8 @@
     width: 100%;
     min-width: 628px;
     height: 174px;
+    margin-top: 0;
+    padding-left: 18px;
   }
 }
 
@@ -290,7 +347,7 @@
 
   &:focus {
     border: 1px solid #444444;
-    outline: none;
+    outline: 1px solid #444444;
   }
 }
 
@@ -298,16 +355,29 @@
 .form__number--error,
 .form__textarea--error {
   border: 1px solid #ff8282;
+  outline: 1px solid #ff8282;
 }
 
 .form__text--email {
   padding-right: 45px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-left: 21px;
+  }
+}
+
+.form__text--phone {
+  padding-right: 50px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-left: 19px;
+  }
 }
 
 .form__text--email + span {
   position: absolute;
   top: 50%;
-  right: 15px;
+  right: 17px;
   transform: translateY(-6px);
   width: 18px;
   height: 13px;
@@ -324,6 +394,10 @@
   height: 20px;
   font-size: 0;
   line-height: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    right: 16px;
+  }
 }
 
 .form__text--email:focus + span {
@@ -370,6 +444,7 @@
 .form__radio-control {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .form__checkbox-mark,
@@ -454,11 +529,17 @@
   }
 }
 
+.form__radio:focus + .form__radio-mark,
+.form__checkbox:focus + .form__checkbox-mark {
+  border: 1px solid #444444;
+  outline: 1px solid #444444;
+}
+
 .form__button {
   width: 100%;
   min-width: 280px;
   margin-bottom: 21px;
-  padding: 13px 45px;
+  padding: 10px 45px;
 
   @media (min-width: variables.$tablet-width) {
     display: inline-block;
@@ -466,12 +547,15 @@
     width: 282px;
     margin-right: 61px;
     margin-bottom: 0;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    vertical-align: middle;
     font-size: 20px;
   }
 
   @media (min-width: variables.$desktop-width) {
     grid-area: button;
-    width: 530px;
+    width: 100%;
     margin-right: 0;
   }
 }
@@ -483,10 +567,12 @@
 
   @media (min-width: variables.$tablet-width) {
     display: inline-block;
+    margin-top: 0;
   }
 
   @media (min-width: variables.$desktop-width) {
     grid-area: explanation;
+    align-self: center;
     text-align: left;
   }
 }

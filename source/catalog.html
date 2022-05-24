@@ -7,7 +7,7 @@
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
     <!-- ------ Header ------  -->
@@ -71,7 +71,7 @@
         </article>
 
         <!-- Карточка товара -->
-        <article class="catalog__product-card">
+        <article class="catalog__product-card catalog__product-card--large">
           <a class="catalog__image-link" href="#">
             <picture>
               <source media="(min-width: 1440px)" srcset="img/catalog/catalog-2-desktop.png 1x, img/catalog/catalog-2-desktop@2x.png 2x">
@@ -130,7 +130,7 @@
         </article>
 
         <!-- Карточка товара -->
-        <article class="catalog__product-card">
+        <article class="catalog__product-card catalog__product-card--large">
           <a class="catalog__image-link" href="#">
             <picture>
               <source media="(min-width: 1440px)" srcset="img/catalog/catalog-4-desktop.png 1x, img/catalog/catalog-4-desktop@2x.png 2x">
@@ -189,7 +189,7 @@
         </article>
 
         <!-- Карточка товара -->
-        <article class="catalog__product-card">
+        <article class="catalog__product-card catalog__product-card--large">
           <a class="catalog__image-link" href="#">
             <picture>
               <source media="(min-width: 1440px)" srcset="img/catalog/catalog-6-desktop.png 1x, img/catalog/catalog-6-desktop@2x.png 2x">
@@ -318,7 +318,7 @@
 
           <p class="catalog__gift-offer">
               Закажите все
-              и получите чехол для
+              и&nbsp;получите чехол для
               кота в подарок!
           </p>
         </div>
@@ -333,13 +333,13 @@
         <div class="contacts__address">
           <p class="contacts__invitation">
             Приглашаем
-            к сотрудничеству
-            дилеров
+            к&nbsp;сотрудничеству
+            дилеров!
           </p>
           <p class="contacts__information">
             ул. Большая
             Конюшенная, д. 19/8
-            Санкт-Петербург
+            <span class="contacts__city">Санкт-Петербург</span>
           </p>
         </div>
         <!-- ------ Карта ------ -->
@@ -352,7 +352,7 @@
       <div class="footer__wrapper">
         <div class="footer__logo">
           <a class="footer__logo-link" href="index.html">
-            <img src="img/logos/logo-simple-title.svg" alt="Кэт энерджи.">
+            <img src="img/logos/logo-simple-title.svg" alt="Кэт энерджи." width="128" height="24">
           </a>
         </div>
         <!-- ------ Соцсети ------ -->
@@ -362,21 +362,21 @@
             <a class="footer__social-link" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Мы в Вконтакте.</span>
               <svg class="footer__social-logo" width="27" height="17">
-                <use href="img/sprite.svg#vk-logo"></use>
+                <use href="img/sprite.svg#vkontakte"></use>
               </svg>
             </a>
 
             <a class="footer__social-link" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Мы в Ютубе.</span>
               <svg class="footer__social-logo" width="28" height="22">
-                <use href="img/sprite.svg#youtube-logo"></use>
+                <use href="img/sprite.svg#youtube"></use>
               </svg>
             </a>
 
             <a class="footer__social-link" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Мы в Телеграме.</span>
               <svg class="footer__social-logo" width="28" height="22">
-                <use href="img/sprite.svg#telegram-logo"></use>
+                <use href="img/sprite.svg#telegram"></use>
               </svg>
             </a>
           </div>
@@ -389,7 +389,7 @@
           <span class="footer__copyright-title">HTML Academy</span>
 
           <svg class="footer__copyright-logo" width="27" height="34">
-            <use href="img/sprite.svg#academy-logo"></use>
+            <use href="img/sprite.svg#htmlacademy"></use>
           </svg>
         </a>
       </section>
