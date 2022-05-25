@@ -85,24 +85,24 @@
   height: 362px;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/icons/map-pin-small@2x.png") !important;
-    background-size: 100% !important;
+    background-image: url("../img/icons/map-pin-small@2x.png") !important; /* stylelint-disable-line */
+    background-size: 100% !important; /* stylelint-disable-line */
   }
 
   @media (min-width: variables.$tablet-width) {
     height: 400px;
 
     [class*="image"] {
-      top: -106px !important;
-      left: -56px !important;
-      width: 113px !important;
-      height: 106px !important;
-      background-image: url("../img/icons/map-pin-large.png") !important;
-      background-size: 100% !important;
+      top: -106px !important; /* stylelint-disable-line */
+      left: -56px !important; /* stylelint-disable-line */
+      width: 113px !important; /* stylelint-disable-line */
+      height: 106px !important; /* stylelint-disable-line */
+      background-image: url("../img/icons/map-pin-large.png") !important; /* stylelint-disable-line */
+      background-size: 100% !important; /* stylelint-disable-line */
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/icons/map-pin-large@2x.png") !important;
-        background-size: 100% !important;
+        background-image: url("../img/icons/map-pin-large@2x.png") !important; /* stylelint-disable-line */
+        background-size: 100% !important; /* stylelint-disable-line */
       }
     }
   }
