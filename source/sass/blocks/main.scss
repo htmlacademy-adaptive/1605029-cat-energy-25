@@ -1,5 +1,9 @@
 @use "../variables.scss";
 
+.main {
+  overflow-x: hidden;
+}
+
 .main__title {
   margin-top: 0;
   margin-bottom: 37px;
