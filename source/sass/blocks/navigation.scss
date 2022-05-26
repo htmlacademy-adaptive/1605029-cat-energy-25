@@ -207,6 +207,7 @@
 
   .navigation--nojs .navigation__list {
     position: static;
+    display: block;
     grid-area: menu;
   }
 

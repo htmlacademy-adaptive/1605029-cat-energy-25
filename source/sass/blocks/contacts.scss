@@ -83,14 +83,26 @@
   width: 100%;
   min-width: variables.$mobile-width;
   height: 362px;
+  background-image: url("../img/location.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/icons/map-pin-small@2x.png") !important; /* stylelint-disable-line */
-    background-size: 100% !important; /* stylelint-disable-line */
+    background-image: url("../img/location@2x.jpg");
+
+    [class*="image"] {
+      background-image: url("../img/icons/map-pin-small@2x.png") !important; /* stylelint-disable-line */
+      background-size: 100% !important; /* stylelint-disable-line */
+    }
   }
 
   @media (min-width: variables.$tablet-width) {
     height: 400px;
+    background-image: url("../img/location-tablet.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 
     [class*="image"] {
       top: -106px !important; /* stylelint-disable-line */
@@ -99,8 +111,12 @@
       height: 106px !important; /* stylelint-disable-line */
       background-image: url("../img/icons/map-pin-large.png") !important; /* stylelint-disable-line */
       background-size: 100% !important; /* stylelint-disable-line */
+    }
 
-      @media (min-resolution: 2dppx) {
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/location-tablet@2x.jpg");
+
+      [class*="image"] {
         background-image: url("../img/icons/map-pin-large@2x.png") !important; /* stylelint-disable-line */
         background-size: 100% !important; /* stylelint-disable-line */
       }
@@ -110,5 +126,13 @@
   @media (min-width: variables.$desktop-width) {
     position: relative;
     z-index: 1;
+    background-image: url("../img/location-desktop.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/location-desktop@2x.jpg");
+    }
   }
 }
