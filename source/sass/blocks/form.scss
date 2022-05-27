@@ -374,70 +374,49 @@
   }
 }
 
-.form__text--email + span {
+.form__email-icon {
   position: absolute;
   top: 50%;
   right: 17px;
   transform: translateY(-6px);
   width: 18px;
-  height: 13px;
+  height: 14px;
   font-size: 0;
   line-height: 0;
+  fill: none;
+  stroke: #222222;
 }
 
-.form__text--phone + span {
+.form__phone-icon {
   position: absolute;
   top: 50%;
   right: 12px;
   transform: translateY(-10px);
   width: 20px;
-  height: 20px;
+  height: 21px;
   font-size: 0;
   line-height: 0;
+  fill: #000000;
 
   @media (min-width: variables.$tablet-width) {
     right: 16px;
   }
 }
 
-.form__text--email:focus + span {
-  svg {
-    line {
-      stroke: #68b738;
-    }
-
-    path {
-      stroke: #68b738;
-    }
-  }
+.form__text--email:focus + .form__email-icon {
+  stroke: #68b738;
 }
 
-.form__text--phone:focus + span {
-  svg {
-    path {
-      fill: #68b738;
-    }
-  }
+.form__text--phone:focus + .form__phone-icon {
+  fill: #68b738;
 }
 
-.form__text--email.form__text--error + span {
-  svg {
-    line {
-      stroke: #ff8282;
-    }
-
-    path {
-      stroke: #ff8282;
-    }
-  }
+.form__text--email.form__text--error + .form__email-icon {
+  stroke: #ff8282;
 }
 
-.form__text--phone.form__text--error + span {
-  svg {
-    path {
-      fill: #ff8282;
-    }
-  }
+.form__text--phone.form__text--error + .form__phone-icon {
+  fill: #ff8282;
 }
 
 .form__checkbox-control,
